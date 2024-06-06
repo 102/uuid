@@ -1,7 +1,8 @@
 import { randomUUID } from "node:crypto";
 
 Bun.serve({
-  fetch: (req) => {
+  port: process.env.PORT,
+  fetch: () => {
     return new Response(randomUUID());
   },
 });
