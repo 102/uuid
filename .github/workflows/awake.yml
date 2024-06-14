@@ -1,0 +1,14 @@
+name: Keep awake
+
+on:
+  schedule:
+    - cron: "*/12 * * * *"
+
+jobs:
+  healthcheck:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Ping uuid service
+        shell: bash
+        run: curl -I https://uuid-364w.onrender.com
