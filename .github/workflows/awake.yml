@@ -5,7 +5,7 @@ on:
     - cron: "*/5 * * * *"
 
 jobs:
-  healthcheck:
+  keep-awake:
     runs-on: ubuntu-latest
 
     steps:
