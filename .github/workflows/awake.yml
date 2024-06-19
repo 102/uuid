@@ -9,6 +9,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Ping uuid service
-        shell: bash
-        run: curl -I https://uuid-364w.onrender.com
+      - name: Ping uuid
+        uses: 102/website-healthcheck@v1.0.2
+        with:
+          web-url: https://uuid-364w.onrender.com/
